@@ -39,12 +39,18 @@
 }
 .header-btn {
     border: none;
-    width: 10vw;
+    width: 65px;
     border-radius: 6px ;
     background-color: rgb(59 130 246);
     color: white;
-    font-weight: 600;
-
-    
+    font-weight: 600; 
       
+}
+.header-btn:hover {
+    background-color: rgb(106, 152, 226); 
+    color:rgb(25, 84, 179);
+}
+
+@media (max-width: 570px) {
+
 }

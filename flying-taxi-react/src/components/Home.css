@@ -1,0 +1,151 @@
+.Home-page {
+    display: flex;
+    margin: 3vw;
+    box-sizing:border-box;
+    padding: 0.5em;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 10vh;
+}
+
+.Home-left {
+    flex: 2;
+    display: flex;
+    flex-direction:column;
+
+    position: relative;
+}
+.Home-left a {
+    text-decoration: none;
+    flex: 2;
+    display: flex;
+
+}
+.Home-left a button {
+    align-items: flex-start;
+    border: none;
+    width: 135px;
+    height: 5vh;
+    border-radius: 6px ;
+    background-color: rgb(59 130 246);
+    color: white;
+    font-weight: 600;
+    margin-left: 20vw;
+    font-size: 14px;
+    position:relative;
+}
+.Home-left a button:hover {
+    background-color: rgb(106, 152, 226); 
+    color:rgb(25, 84, 179);
+}
+
+.Home-right {
+    flex: 2;
+    display: flex;
+    flex-direction:column;
+    color: rgb(59 130 246);
+}
+.Home-right img{
+    width: 40vw;
+}
+
+.Service-page {
+
+    align-items: center;
+    display:flex;
+    box-sizing: border-box;
+    margin: 10px auto;
+    flex-direction: column;
+    margin-bottom: 15vh;
+}
+
+.Service-page form {
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.Service-page .check-start{
+    margin-right: 10vw;
+}
+.Service-page .check-destination {
+    margin-right: 10vw;
+}
+
+.Service-page i{
+    color: rgb(59 130 246);
+    width: 30px;
+    font-size: 2em;
+}
+
+.Service-page input {
+    border: none;
+    border-bottom: 2px solid rgb(59 130 246);
+    width: 16em;
+}
+
+.Service-page button {
+    border: none;
+    width: 65px;
+    height: 5vh;
+    border-radius: 6px ;
+    background-color: rgb(59 130 246);
+    color: white;
+    font-weight: 600; 
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.Service-page button:hover {
+    background-color: rgb(106, 152, 226); 
+    color:rgb(25, 84, 179);
+}
+
+.pop-up-price-show {
+    display: block;
+    z-index: 999;
+    position:absolute;
+    top:60%;
+    left:20%;
+    opacity: 1;
+    background-color: rgb(59 130 246);
+    color:white;
+    width: 50vw;
+    margin: auto;
+    padding: 2em;
+
+}
+.pop-up-price-show button {
+    border: none;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 6px;
+    background-color: white;
+    color: rgb(59 130 246);
+    font-weight: 600; 
+    font-size: 15px;
+    float: right;
+}
+
+.pop-up-price-hide {
+    display: none;
+}
+
+
+@media (max-width: 640px) {
+    .Service-page .check-start{
+        margin-right: 7vw;
+    }
+    .Service-page input {
+        width: 12em;
+    }
+    .Service-page .check-destination{
+        margin-right: 7vw;
+    }
+
+}
+
+@media (max-width: 470px) {
+
+    
+}

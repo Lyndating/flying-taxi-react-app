@@ -1,6 +1,9 @@
 import React from 'react';
+
 import SignUpForm from './components/SignUpForm';
 import RedirectingPage from './components/RedirectingPage';
+
+
 
 import './App.css';
 import {HashRouter as Router, Route, Routes, Link} from 'react-router-dom';
@@ -24,8 +27,12 @@ function App() {
   return (
     <div className="App">
       {routes}
+
       <SignUpForm />
       <RedirectingPage />
+
+  
+
     </div>
   );
 }
