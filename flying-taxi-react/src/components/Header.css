@@ -1,0 +1,50 @@
+
+.header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    border-bottom: 0.1px solid lightgray;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 999;
+}
+.header__left{
+    display: flex;
+}
+.header__left > img{
+    object-fit: contain;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header__right{
+    display: flex;
+   
+}
+
+.headerOption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    color:rgb(59 130 246);
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: space-around;
+}
+.headerOption:hover{
+    color: rgb(106, 152, 226);
+}
+.header-btn {
+    border: none;
+    width: 10vw;
+    border-radius: 6px ;
+    background-color: rgb(59 130 246);
+    color: white;
+    font-weight: 600;
+
+    
+      
+}
