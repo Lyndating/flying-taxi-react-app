@@ -1,4 +1,5 @@
 import React from 'react';
+import Signup from './components/Signup';
 import SignUpForm from './components/SignUpForm';
 
 import './App.css';
@@ -23,7 +24,8 @@ function App() {
   return (
     <div className="App">
       {routes}
-      <SignUpForm />
+      <Signup />
+      {/* <SignUpForm /> */}
     </div>
   );
 }
