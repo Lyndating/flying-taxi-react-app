@@ -15,7 +15,7 @@ const SignupSchema = Yup.object().shape({
   .max(20, 'too long')
   .required('Required'),
   lastName: Yup.string().min(3, "too short"),
-  email: Yup.string().email("invalid email").required("Required")
+  email: Yup.string().email("2,invalid email").required("Required")
 })
 
 const SignUpForm = () => {
