@@ -34,7 +34,7 @@ const Home = () => {
         <div className='Home-page'>
             <div className='Home-left'>
                 <h1>Your all-in-one taxi services</h1>
-                <p>You can monitor and manage </p>
+                <p> Time to ride in comfort </p>
                 <Link to="/service">
                     <button>Click & book now</button>
                 </Link>
@@ -76,6 +76,9 @@ const Home = () => {
                 <p>Price: $ {price}</p>
                 <button onClick={_closePopUp}>Close</button>
             </div>}
+        <div className='Signup-form'>
+            
+        </div>
         </>
     )
 }

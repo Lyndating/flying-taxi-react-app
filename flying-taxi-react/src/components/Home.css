@@ -5,13 +5,14 @@
     padding: 0.5em;
     align-items:flex-start;
     justify-content: space-evenly;
+    margin-bottom: 10vh;
 }
 
 .Home-left {
     flex: 2;
     display: flex;
     flex-direction:column;
-    color: rgb(59 130 246);
+
     position: relative;
 }
 .Home-left a {
@@ -23,7 +24,7 @@
 .Home-left a button {
     align-items: flex-start;
     border: none;
-    width: 12vw;
+    width: 135px;
     height: 5vh;
     border-radius: 6px ;
     background-color: rgb(59 130 246);
@@ -49,13 +50,13 @@
 }
 
 .Service-page {
-    color: rgb(59 130 246);
+
     align-items: center;
     display:flex;
     box-sizing: border-box;
     margin: 10px auto;
     flex-direction: column;
-
+    margin-bottom: 15vh;
 }
 
 .Service-page form {
@@ -72,24 +73,27 @@
 }
 
 .Service-page i{
-    color: rgb(59 130 246);;
+    color: rgb(59 130 246);
+    width: 30px;
+    font-size: 2em;
 }
 
 .Service-page input {
     border: none;
     border-bottom: 2px solid rgb(59 130 246);
-
+    width: 16em;
 }
 
 .Service-page button {
     border: none;
-    width: 10vw;
+    width: 65px;
     height: 5vh;
     border-radius: 6px ;
     background-color: rgb(59 130 246);
     color: white;
     font-weight: 600; 
     font-size: 14px;
+    margin-top: 30px;
 }
 
 .Service-page button:hover {
@@ -127,3 +131,21 @@
     display: none;
 }
 
+
+@media (max-width: 640px) {
+    .Service-page .check-start{
+        margin-right: 7vw;
+    }
+    .Service-page input {
+        width: 12em;
+    }
+    .Service-page .check-destination{
+        margin-right: 7vw;
+    }
+
+}
+
+@media (max-width: 470px) {
+
+    
+}
