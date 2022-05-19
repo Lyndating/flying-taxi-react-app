@@ -58,6 +58,19 @@
 
 }
 
+.Service-page form {
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.Service-page .check-start{
+    margin-right: 10vw;
+}
+.Service-page .check-destination {
+    margin-right: 10vw;
+}
+
 .Service-page i{
     color: rgb(59 130 246);;
 }
@@ -84,7 +97,33 @@
     color:rgb(25, 84, 179);
 }
 
-.pop-up-price {
+.pop-up-price-show {
+    display: block;
+    z-index: 999;
+    position:absolute;
+    top:60%;
+    left:20%;
+    opacity: 1;
+    background-color: rgb(59 130 246);
+    color:white;
+    width: 50vw;
+    margin: auto;
+    padding: 2em;
+
+}
+.pop-up-price-show button {
+    border: none;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 6px;
+    background-color: white;
+    color: rgb(59 130 246);
+    font-weight: 600; 
+    font-size: 15px;
+    float: right;
+}
+
+.pop-up-price-hide {
     display: none;
 }
 

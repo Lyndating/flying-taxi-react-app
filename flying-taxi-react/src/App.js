@@ -1,5 +1,5 @@
 import React from 'react';
-import SignUpForm from './components/SignUpForm';
+// import SignUpForm from './components/SignUpForm';
 
 import './App.css';
 import {HashRouter as Router, Route, Routes, Link} from 'react-router-dom';
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       {routes}
   
-      <SignUpForm />
+      {/* <SignUpForm /> */}
     </div>
   );
 }
