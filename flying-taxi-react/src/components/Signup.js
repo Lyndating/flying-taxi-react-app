@@ -11,6 +11,7 @@ const Signup = (props) => {
     const [formedit, setFormEdit] = useState(true);
     const [signupErrors, setSignupErrors] = useState([]);
 
+
     // const signUp = (user) => {
     //     fetch(`https://flying-taxi-service-server.herokuapp.com/users`, {
     //       method: 'POST',
@@ -71,13 +72,15 @@ const Signup = (props) => {
 
     return (
         <div>
-            <div className="bg-yellow-50 w-64 Sign-up-header">
+            <div className=" w-64 Sign-up-header">
             <h1>Sign Up</h1>
             <button onClick={props.onClick}style={{float:"right"}}>X</button>
             </div>
             <div className="my-2 flex flex-col">
-                <form onSubmit={handleSubmit}
-                className="w-64 bg-yellow-50 p-4 flex flex-col shadow-sm">
+                <form onSubmit={handleSubmit} 
+                
+                className="w-64  p-4 flex flex-col shadow-sm">
+                <div className="form-body">
                     <label>
                         First name
                         <input name='first_name' value={state.first_name} onChange={handleChange}
@@ -115,7 +118,7 @@ const Signup = (props) => {
                     </label>
                     <br></br>    
                     <button className="bg-yellow-400 hover:bg-yellow-200 text-white font-bold py-2 px-4 rounded">Sign Up</button>
-
+                    </div>
 
 
                 </form>

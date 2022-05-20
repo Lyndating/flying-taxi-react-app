@@ -2,7 +2,7 @@ import React, {useState, useTransition} from 'react';
 import "./Home.css";
 import{Link} from 'react-router-dom';
 import Signup from './Signup';
-
+import RedirectingPage from './RedirectingPage';
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -15,8 +15,8 @@ const Home = () => {
     const [result, setResult] = useState(false);
     const [price, setPrice]= useState(0);
     const [formshow, SetFormShow] = useState(false);
-    const [emailInput, setEmailInput] = useState();
-
+    const [emailInput, setEmailInput] = useState('');
+    const [completeForm, setCompleteForm] = useState(false);
     const _sumbithandler = (e)=>{
         e.preventDefault();
         setResult(true);
@@ -46,7 +46,8 @@ const Home = () => {
         signupStyleClassName="pop-up-signup-hide";
     }
     const saveUserHandler = (data)=> {
-        console.log(data);
+        SetFormShow(false);
+        setCompleteForm(true);
     }
     return (
         <>
@@ -107,7 +108,11 @@ const Home = () => {
             <div className={signupStyleClassName}>
                 <Signup show={formshow} onClick={closeSignupForm} onSubmit={saveUserHandler}/>
             </div>
-            
+        }
+        {completeForm &&
+            <div className={signupStyleClassName}>
+                <RedirectingPage />
+            </div>
         }
         </>
     )
