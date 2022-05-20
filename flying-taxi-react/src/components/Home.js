@@ -15,6 +15,7 @@ const Home = () => {
     const [result, setResult] = useState(false);
     const [price, setPrice]= useState(0);
     const [formshow, SetFormShow] = useState(false);
+    const [emailInput, setEmailInput] = useState();
 
     const _sumbithandler = (e)=>{
         e.preventDefault();
@@ -44,7 +45,9 @@ const Home = () => {
     }else{
         signupStyleClassName="pop-up-signup-hide";
     }
-    
+    const saveUserHandler = (data)=> {
+        console.log(data);
+    }
     return (
         <>
         <div className='Home-page'>
@@ -95,11 +98,14 @@ const Home = () => {
         <div className='Signup-form'>
             <p>Get all the latest updates straight to your inbox!</p>
             <h1>Sign up to our newsletter</h1>
+            <div className='Signup-tag'>
+            <input type='email' placeholder="Your email"onChange={emailInput}/>
             <button onClick={_SignupHandler}>Sign up</button>
+            </div>
         </div>
         {formshow &&
             <div className={signupStyleClassName}>
-                <Signup show={formshow} onClick={closeSignupForm}/>
+                <Signup show={formshow} onClick={closeSignupForm} onSubmit={saveUserHandler}/>
             </div>
             
         }
