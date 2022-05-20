@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+* {
+  font-family: 'Raleway', sans-serif;
+}
+>>>>>>> 7106d8c9385e86f62b899eccf09b0bb5e5ac014f
 
 @tailwind base;
 @tailwind components;

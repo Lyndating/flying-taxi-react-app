@@ -50,13 +50,16 @@
 }
 
 .Service-page {
-
     align-items: center;
     display:flex;
     box-sizing: border-box;
     margin: 10px auto;
     flex-direction: column;
     margin-bottom: 15vh;
+}
+.Service-page h2 {
+    font-size: 30px;
+    margin-bottom: 5vh;
 }
 
 .Service-page form {
@@ -101,11 +104,15 @@
     color:rgb(25, 84, 179);
 }
 
+.Signup-form button:hover {
+    background-color: rgb(106, 152, 226); 
+    color:rgb(25, 84, 179);
+}
 .pop-up-price-show {
     display: block;
     z-index: 999;
     position:absolute;
-    top:60%;
+    top:50%;
     left:20%;
     opacity: 1;
     background-color: rgb(59 130 246);
@@ -113,6 +120,7 @@
     width: 50vw;
     margin: auto;
     padding: 2em;
+    border-radius: 5%;
 
 }
 .pop-up-price-show button {
@@ -131,8 +139,59 @@
     display: none;
 }
 
+.Signup-form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Signup-form p {
+    font-size: 12px;
+}
+
+.Signup-form h1 {
+    font-weight: 600;
+    margin-top: -10px;
+}
+.Signup-form button {
+    border: none;
+    width: 12vw;
+    height: 5vh;
+    border-radius: 6px;
+    background-color: rgb(59 130 246);
+    color: white;
+    font-weight: 600; 
+    font-size: 15px;
+}
+
+.pop-up-signup-show {
+    display: block;
+    z-index: 999;
+    position:absolute;
+    top:70%;
+    opacity: 1;
+    background-color: white;
+    left: 5vw;
+    width: 100vw;
+    height:50vh;
+    margin: auto;
+    padding: 2em;
+    border-radius: 2%;
+}
+
+.pop-up-signup-hide {
+    display: none;
+}
+
+
 
 @media (max-width: 640px) {
+    .header button{
+        height: 4vh;
+        font-size: 14px;
+    }
+
     .Service-page .check-start{
         margin-right: 7vw;
     }
@@ -143,9 +202,75 @@
         margin-right: 7vw;
     }
 
+
 }
 
-@media (max-width: 470px) {
+@media (max-width: 390px) {
+    .Home-left {
+        padding-right: 4vw;
+        width: 90vw;
+        align-items: center;
+    }
+    .Home-right {
+        display: none;
+    }
+    .Home-left a button {
+        margin-top: 5vh;
+        margin-left:0;
+        font-size: 11px;
+        height: 4vh;
+        width: 120px;
+        padding: 5px;
+        
+    }
+    .Home-left h1{
+        font-size: 1.6em;
+        line-height: 2em;
+    }
+    .Home-left p {
+        display:none;
+       
+    }
+    .Service-page {
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 10vh;
+    }
+    .Service-page form {
+        display:flex;
+        flex-direction: column;
+    }
+    .Service-page h2{
+        font-size: 24px;
+    }
+    .Service-page form label {
+        font-size: 15px;
+    }
+    .Service-page button {
+        height: 4vh;
+    }
 
-    
+    .Signup-form {
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 10vh;
+    }
+
+    .Signup-form p {
+        font-size: 10px;
+    }
+    .Signup-form h1{
+        font-size: 1.6em;
+        margin-bottom: 2vh;
+    }
+    .Signup-form button {
+        width: 100px;
+        height: 4vh;
+    }
+    .Sign-up-header {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+   
 }

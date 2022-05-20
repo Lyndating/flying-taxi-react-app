@@ -30,10 +30,16 @@ function App() {
     <div className="App">
       {routes}
       {/* <Signup /> */}
+<<<<<<< HEAD
 
       {/* <SignUpForm />
       <RedirectingPage /> */}
       <CheckBox />
+=======
+      {/* <Service/> */}
+      {/* <SignUpForm /> */}
+      <RedirectingPage />
+>>>>>>> 7106d8c9385e86f62b899eccf09b0bb5e5ac014f
 
   
 
