@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
 const Signup = (props) => {
+    console.log(props);
     const [user, setUser] = useState({});
     const [state, setState] = useState({
         first_name: '',
         last_name: '',
         email: ''
     });
+    const [formedit, setFormEdit] = useState(true);
     const [signupErrors, setSignupErrors] = useState([]);
 
     // const signUp = (user) => {
@@ -35,7 +37,11 @@ const Signup = (props) => {
     const handleChange = (event) => {
         setState((prev) => ({ ...prev, [event.target.name]: event.target.value }));
     }
+    const _closeHandler = () => {
+        setFormEdit(false);
+    }
 
+    console.log( props.show);
     const handleSubmit = (event) => {
         event.preventDefault();
         // fetch(`https://flying-taxi-service-server.herokuapp.com/users`, {
@@ -65,8 +71,10 @@ const Signup = (props) => {
 
     return (
         <div>
+            <div className="bg-gray-5 w-64 Sign-up-header">
             <h1>Sign Up</h1>
-
+            <button onClick={props.onClick}style={{float:"right"}}>X</button>
+            </div>
             <div className="my-2 flex flex-col">
                 <form onSubmit={handleSubmit}
                 className="w-64 bg-gray-50 p-4 flex flex-col shadow-sm">
@@ -105,7 +113,7 @@ const Signup = (props) => {
                             </ul> 
                         : null}
                     </label>
-
+                    <br></br>    
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Up</button>
 
 

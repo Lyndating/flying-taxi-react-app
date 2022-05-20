@@ -28,8 +28,8 @@ function App() {
   return (
     <div className="App">
       {routes}
-      <Signup />
-
+      {/* <Signup /> */}
+      {/* <Service/> */}
       {/* <SignUpForm /> */}
       <RedirectingPage />
 
