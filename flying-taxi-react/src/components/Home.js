@@ -96,7 +96,7 @@ const Home = () => {
         </div>
         {result && 
             <div className={pricingStyleClassName}>
-                <p>From : {startLocation}</p>
+                <p>From : {startLocation} </p>
                 <p>To: {destination}</p>
                 <p>Price: $ {price}</p>
                 <button onClick={_closePopUp}>Close</button>

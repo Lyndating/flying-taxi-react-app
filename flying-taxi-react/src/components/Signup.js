@@ -2,12 +2,11 @@ import React, { useState } from "react";
 
 
 const Signup = (props) => {
-    console.log(props);
     const [user, setUser] = useState({});
     const [state, setState] = useState({
         first_name: '',
         last_name: '',
-        email: '',
+        email: props.email,
     });
     const [checkbox,setCheckbox] = useState({
         newsletter_a: null,
@@ -109,7 +108,7 @@ const Signup = (props) => {
                         <input name='first_name' value={state.first_name} onChange={handleChange}
                         className="p-2 border-2 border-gray-400" required/>
                         {signupErrors.first_name !== undefined ? 
-                            <ul className = "form-errors"> {signupErrors.first_name.map((error) => (
+                            <ul className = "form-errors text-red-400 text-sm"> {signupErrors.first_name.map((error) => (
                                 <li key={Math.random()}>{error}</li>
                                 ))}
                             </ul> 
@@ -121,7 +120,7 @@ const Signup = (props) => {
                         <input name='last_name' value={state.last_name} onChange={handleChange}
                         className="p-2 border-2 border-gray-400" required/>
                         {signupErrors.last_name !== undefined ? 
-                            <ul className = "form-errors"> {signupErrors.last_name.map((error) => (
+                            <ul className = "form-errors text-red-400 text-sm"> {signupErrors.last_name.map((error) => (
                                 <li key={Math.random()}>{error}</li>
                                 ))}
                             </ul> 
@@ -133,47 +132,89 @@ const Signup = (props) => {
                         <input name='email' value={state.email} onChange={handleChange}
                         className="p-2 border-2 border-gray-400" required/>
                         {signupErrors.email !== undefined ? 
-                            <ul className = "form-errors"> {signupErrors.email.map((error) => (
+                            <ul className = "form-errors text-red-400 text-sm"> {signupErrors.email.map((error) => (
                                 <li key={Math.random()}>{error}</li>
                                 ))}
                             </ul>
                         : null}
                     </label>
+                    
+                    <h1 class="font-bold text-xl text-center m-4"> Choose topics:</h1>
 
-                    <label>
-                        <input type="checkbox" name='newsletter_a' value={checkbox.newsletter_a} onChange={handleCheck} />
-                            Newsletter 
-                    </label>
-                    <label>
-                        <input type="checkbox" name='newsletter_b' value={checkbox.newsletter_b} onChange={handleCheck} />
-                            Newsletter 
-                    </label>
-                    <label>
-                        <input type="checkbox" name='newsletter_c' value={checkbox.newsletter_c} onChange={handleCheck} />
-                            Newsletter 
-                    </label>
-                    <label>
-                        <input type="checkbox" name='newsletter_d' value={checkbox.newsletter_d} onChange={handleCheck} />
-                            Newsletter 
-                    </label>
+                    <div class="text-center ">
+                        <div class="accent-yellow-300">
+                            <label class="inline-flex items-center">
+                            <input type="checkbox" name='newsletter_a' value={checkbox.newsletter_a} onChange={handleCheck} 
+                            class="w-14 h-14"/>
+                                <span class="ml-2">Newsletter A</span>
+                            </label>
+                        </div>
+                    </div>
 
-                    <label>
-                        <input type="checkbox" name='sub_daily' value={checkbox.sub_daily} onChange={handleCheck} />
-                            Daily 
-                    </label>
+                    <div class="text-center ">
+                        <div class="accent-yellow-300">
+                            <label class="inline-flex items-center">
+                            <input type="checkbox" name='newsletter_b' value={checkbox.newsletter_b} onChange={handleCheck} 
+                            class="w-14 h-14"/>
+                                <span class="ml-2">Newsletter B</span>
+                            </label>
+                        </div>
+                    </div>
 
-                    <label>
-                        <input type="checkbox" name='sub_weekly' value={checkbox.sub_weekly} onChange={handleCheck} />
-                            Weekly 
-                    </label>
+                    <div class="text-center ">
+                        <div class="accent-yellow-300">
+                            <label class="inline-flex items-center">
+                            <input type="checkbox" name='newsletter_c' value={checkbox.newsletter_c} onChange={handleCheck} 
+                            class="w-14 h-14"/>
+                                <span class="ml-2">Newsletter C</span>
+                            </label>
+                        </div>
+                    </div>
 
-                    <label>
-                        <input type="checkbox" name='sub_monthly' value={checkbox.sub_monthly} onChange={handleCheck} />
-                            Monthly
-                    </label>
+                    <div class="text-center ">
+                        <div class="accent-yellow-300">
+                            <label class="inline-flex items-center">
+                            <input type="checkbox" name='newsletter_d' value={checkbox.newsletter_d} onChange={handleCheck} 
+                            class="w-14 h-14"/>
+                                <span class="ml-2">Newsletter D</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <h1 class="font-bold text-xl text-center m-2"> Delivery frequency:</h1> 
+                    
+                    <div class="block accent-yellow-300">
+                        <div class="mt-0 px-8">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name='sub_daily' value={checkbox.sub_daily} onChange={handleCheck}
+                                class="w-4 h-4" />
+                                <span class="ml-2 ">Daily</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="block accent-yellow-300">
+                        <div class="mt-0 px-8">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name='sub_weekly' value={checkbox.sub_weekly} onChange={handleCheck}
+                                class="w-4 h-4" />
+                                <span class="ml-2 ">Weekly</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="block accent-yellow-300">
+                        <div class="mt-0 px-8">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name='sub_monthly' value={checkbox.sub_monthly} onChange={handleCheck}
+                                class="w-4 h-4" />
+                                <span class="ml-2 ">Weekly</span>
+                            </label>
+                        </div>
+                    </div>
 
 
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Up</button>
+                    <button className="bg-yellow-500 hover:bg-yellow-300 text-white font-bold py-2 px-4 rounded">Sign Up</button>
 
 
                 </form>
