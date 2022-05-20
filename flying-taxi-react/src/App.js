@@ -3,6 +3,7 @@ import Signup from './components/Signup';
 
 import SignUpForm from './components/SignUpForm';
 import RedirectingPage from './components/RedirectingPage';
+import CheckBox from './components/CheckBox';
 
 
 
@@ -17,7 +18,7 @@ const routes = (
   <Router>
     <Header/>
     <Routes>
-    <Route exact path='/' element={<Home/>}/>
+    {/* <Route exact path='/' element={<Home/>}/> */}
     <Route path='/service' element={<Service/>}/>
     <Route path='/contact' element={<Contact/>}/>
     </Routes>
@@ -28,10 +29,11 @@ function App() {
   return (
     <div className="App">
       {routes}
-      <Signup />
+      {/* <Signup /> */}
 
-      {/* <SignUpForm /> */}
-      <RedirectingPage />
+      {/* <SignUpForm />
+      <RedirectingPage /> */}
+      <CheckBox />
 
   
 

@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 // import * as Yup from 'yup';
 import Label from './Label';
 
@@ -41,7 +41,7 @@ const SignUpForm = () => {
   //  initialValues={{firstName:'', lastName:'', email:''}}
   // //  validationSchema={SignupSchema}
   //  onSubmit={submitForm}
->
+// >
 
 
 <Form className="w-64 bg-gray-50 p-4 flex flex-col shadow-sm">
