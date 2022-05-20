@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 
 const Signup = (props) => {
+    console.log(props);
     const [user, setUser] = useState({});
     const [state, setState] = useState({
         first_name: '',
@@ -73,9 +74,11 @@ const Signup = (props) => {
 
     return (
         <div>
+            <div className="bg-gray-5 w-64 Sign-up-header">
             <h1>Sign Up</h1>
-
-            <div className="my-2 flex flex-col">
+            <button onClick={props.onClick}style={{float:"right"}}>X</button>
+            </div>
+            <div className="form-body my-2 flex flex-col">
                 <form onSubmit={handleSubmit}
                 className="w-64 bg-gray-50 p-4 flex flex-col shadow-sm">
                     <label>

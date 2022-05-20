@@ -1,6 +1,6 @@
 // import React from 'react'
 // import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
-// import * as Yup from 'yup';
+// // import * as Yup from 'yup';
 // import Label from './Label';
 
 // interface FormValues {
@@ -10,23 +10,23 @@
 // }
 
 
-// const SignupSchema = Yup.object().shape({
-//   firstName: Yup.string()
-//   .min(3, 'short')
-//   .max(20, 'too long')
-//   .required('Required'),
-//   lastName: Yup.string().min(3, "too short"),
-//   email: Yup.string().email("2,invalid email").required("Required")
-// })
+// // const SignupSchema = Yup.object().shape({
+// //   firstName: Yup.string()
+// //   .min(3, 'short')
+// //   .max(20, 'too long')
+// //   .required('Required'),
+// //   lastName: Yup.string().min(3, "too short"),
+// //   email: Yup.string().email("2,invalid email").required("Required")
+// // })
 
-// const SignupSchema = Yup.object().shape({
-//   firstName: Yup.string()
-//   .min(3, 'short')
-//   .max(20, 'too long')
-//   .required('Required'),
-//   lastName: Yup.string().min(3, "too short"),
-//   email: Yup.string().email("invalid email").required("Required")
-// })
+// // const SignupSchema = Yup.object().shape({
+// //   firstName: Yup.string()
+// //   .min(3, 'short')
+// //   .max(20, 'too long')
+// //   .required('Required'),
+// //   lastName: Yup.string().min(3, "too short"),
+// //   email: Yup.string().email("invalid email").required("Required")
+// // })
 
 
 // const SignUpForm = () => {
@@ -37,15 +37,14 @@
 
  
 //   return (
-//    <Formik
-//    initialValues={{firstName:'', lastName:'', email:''}}
-//    validationSchema={SignupSchema}
-//    onSubmit={submitForm}
-// >
+//   //  <Formik
+//   //  initialValues={{firstName:'', lastName:'', email:''}}
+//   // //  validationSchema={SignupSchema}
+//   //  onSubmit={submitForm}
+// // >
 
-//   {}
 
-//      <Form className="w-64 bg-gray-50 p-4 flex flex-col shadow-sm">
+// <Form className="w-64 bg-gray-50 p-4 flex flex-col shadow-sm">
 
 // <h2 className="text-center text-2x1 font-bold">sign up for newsletter!</h2>
 // <div className="my-2 flex flex-col">
@@ -70,7 +69,7 @@
 //  </Form>
 
  
-//    </Formik>
+//   //  </Formik>
 //   )
 // }
 

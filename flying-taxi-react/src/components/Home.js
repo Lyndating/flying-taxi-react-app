@@ -1,6 +1,7 @@
 import React, {useState, useTransition} from 'react';
 import "./Home.css";
 import{Link} from 'react-router-dom';
+import Signup from './Signup';
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -13,6 +14,9 @@ const Home = () => {
     const [destination, setDestination] = useState('');
     const [result, setResult] = useState(false);
     const [price, setPrice]= useState(0);
+    const [formshow, SetFormShow] = useState(false);
+    const [emailInput, setEmailInput] = useState();
+
     const _sumbithandler = (e)=>{
         e.preventDefault();
         setResult(true);
@@ -22,13 +26,28 @@ const Home = () => {
     const _closePopUp = ()=>{
         setResult(false);
     }
-    let cssStyleClassName = "";
+    let pricingStyleClassName = "";
     if (result){
-        cssStyleClassName="pop-up-price-show";
+        pricingStyleClassName="pop-up-price-show ";
     }else{
-        cssStyleClassName="pop-up-price-hide";
+        pricingStyleClassName="pop-up-price-hide";
     }
 
+    const _SignupHandler = ()=>{
+        SetFormShow(true);
+    } 
+    const closeSignupForm =()=>{
+        SetFormShow(false);
+    }
+    let signupStyleClassName ="";
+    if (formshow) {
+        signupStyleClassName="pop-up-signup-show bg-gray-5";
+    }else{
+        signupStyleClassName="pop-up-signup-hide";
+    }
+    const saveUserHandler = (data)=> {
+        console.log(data);
+    }
     return (
         <>
         <div className='Home-page'>
@@ -70,15 +89,26 @@ const Home = () => {
             </form>
         </div>
         {result && 
-            <div className={cssStyleClassName}>
+            <div className={pricingStyleClassName}>
                 <p>From : {startLocation}</p>
                 <p>To: {destination}</p>
                 <p>Price: $ {price}</p>
                 <button onClick={_closePopUp}>Close</button>
             </div>}
         <div className='Signup-form'>
-            
+            <p>Get all the latest updates straight to your inbox!</p>
+            <h1>Sign up to our newsletter</h1>
+            <div className='Signup-tag'>
+            <input type='email' placeholder="Your email"onChange={emailInput}/>
+            <button onClick={_SignupHandler}>Sign up</button>
+            </div>
         </div>
+        {formshow &&
+            <div className={signupStyleClassName}>
+                <Signup show={formshow} onClick={closeSignupForm} onSubmit={saveUserHandler}/>
+            </div>
+            
+        }
         </>
     )
 }

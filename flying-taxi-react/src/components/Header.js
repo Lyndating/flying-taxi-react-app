@@ -9,14 +9,15 @@ const Header = () => {
     return (
         <div className="header">
             <div className="header__left">
-                <img src="logo192.png" alt="logo"/>
+                <Link to="/"><img src="taxi-logo.png" alt="logo"/></Link>
+                
             </div>
             <div className="header__right">
                 <Link className="headerOption" to="/">Home</Link>
                 <Link className="headerOption"to="/service">Service</Link>
                 <Link className="headerOption" to="/Contact">Contact</Link>
             </div>
-            <button className='header-btn'>Call Us</button>
+            {/* <button className='header-btn'>Call Us</button> */}
         </div>  
     )
 }

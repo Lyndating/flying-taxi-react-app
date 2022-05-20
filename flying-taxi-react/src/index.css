@@ -1,4 +1,7 @@
-
+* {
+  font-family: 'Raleway', sans-serif;
+  background-color: #F5F5F5;
+}
 
 @tailwind base;
 @tailwind components;

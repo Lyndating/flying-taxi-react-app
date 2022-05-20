@@ -3,6 +3,7 @@ import Signup from './components/Signup';
 
 import SignUpForm from './components/SignUpForm';
 import RedirectingPage from './components/RedirectingPage';
+import CheckBox from './components/CheckBox';
 
 
 
@@ -12,6 +13,7 @@ import Home from './components/Home'
 import Service from './components/Service';
 import Contact from './components/Contact';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const routes = (
   <Router>
@@ -21,6 +23,7 @@ const routes = (
     <Route path='/service' element={<Service/>}/>
     <Route path='/contact' element={<Contact/>}/>
     </Routes>
+    <Footer/>
   </Router>
 )
 
@@ -28,10 +31,14 @@ function App() {
   return (
     <div className="App">
       {routes}
-      <Signup />
+      {/* <Signup /> */}
 
-      {/* <SignUpForm /> */}
-      <RedirectingPage />
+      {/* <SignUpForm />
+      <RedirectingPage /> */}
+      {/* <CheckBox /> */}
+
+      {/* <RedirectingPage /> */}
+      {/* <RedirectingPage /> */}
 
   
 

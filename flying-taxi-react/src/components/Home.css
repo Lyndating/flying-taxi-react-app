@@ -1,19 +1,23 @@
 .Home-page {
     display: flex;
-    margin: 3vw;
+    margin-top: 9vh;
     box-sizing:border-box;
     padding: 0.5em;
     align-items:flex-start;
-    justify-content: space-evenly;
-    margin-bottom: 10vh;
+    justify-content: space-between;
+    margin-bottom: 15vh;
+    height: 45vh;
 }
 
 .Home-left {
     flex: 2;
     display: flex;
     flex-direction:column;
-
     position: relative;
+    margin-top: 50px;
+}
+.Home-page h1{
+    font-size: 3em;
 }
 .Home-left a {
     text-decoration: none;
@@ -27,7 +31,7 @@
     width: 135px;
     height: 5vh;
     border-radius: 6px ;
-    background-color: rgb(59 130 246);
+    background-color: black ;
     color: white;
     font-weight: 600;
     margin-left: 20vw;
@@ -35,8 +39,8 @@
     position:relative;
 }
 .Home-left a button:hover {
-    background-color: rgb(106, 152, 226); 
-    color:rgb(25, 84, 179);
+    background-color: grey; 
+    color:white;
 }
 
 .Home-right {
@@ -46,42 +50,55 @@
     color: rgb(59 130 246);
 }
 .Home-right img{
-    width: 40vw;
+    width: 45vw;
 }
 
 .Service-page {
-
     align-items: center;
     display:flex;
     box-sizing: border-box;
     margin: 10px auto;
     flex-direction: column;
-    margin-bottom: 15vh;
+    padding-bottom: 5vh;
+    background-color: #FDD943;
+    margin-bottom: 5vh;
+}
+.Service-page h2 {
+    font-size: 30px;
+    margin-bottom: 5vh;
+    background-color: #FDD943;
 }
 
 .Service-page form {
     display:flex;
     justify-content: space-between;
     margin: auto;
+    background-color: #FDD943;
 }
 
 .Service-page .check-start{
     margin-right: 10vw;
+    background-color: #FDD943;
 }
 .Service-page .check-destination {
     margin-right: 10vw;
+    background-color: #FDD943;
 }
-
+.Service-page form label {
+    background-color: #FDD943;
+}
 .Service-page i{
-    color: rgb(59 130 246);
+    color: black;
     width: 30px;
     font-size: 2em;
+    background-color: #FDD943;
 }
 
 .Service-page input {
     border: none;
-    border-bottom: 2px solid rgb(59 130 246);
+    border-bottom: 2px solid black;
     width: 16em;
+    background-color: #FDD943;
 }
 
 .Service-page button {
@@ -89,7 +106,7 @@
     width: 65px;
     height: 5vh;
     border-radius: 6px ;
-    background-color: rgb(59 130 246);
+    background-color: black;
     color: white;
     font-weight: 600; 
     font-size: 14px;
@@ -97,31 +114,39 @@
 }
 
 .Service-page button:hover {
-    background-color: rgb(106, 152, 226); 
-    color:rgb(25, 84, 179);
+    background-color: grey; 
+    color:white;
 }
 
+.Signup-form button:hover {
+    background-color: grey; 
+    color:white;
+}
 .pop-up-price-show {
     display: block;
     z-index: 999;
     position:absolute;
-    top:60%;
-    left:20%;
+    top:50%;
+    left:10%;
     opacity: 1;
-    background-color: rgb(59 130 246);
-    color:white;
-    width: 50vw;
+    background-color: white;
+    color:black;
+    width: 80vw;
     margin: auto;
     padding: 2em;
-
+    border-radius: 5%;
+    height:20vh;
+}
+.pop-up-price-show p {
+    background-color: white;
 }
 .pop-up-price-show button {
     border: none;
-    width: 10vw;
+    width: 15vw;
     height: 5vh;
     border-radius: 6px;
-    background-color: white;
-    color: rgb(59 130 246);
+    background-color: #FDD943;
+    color: white;
     font-weight: 600; 
     font-size: 15px;
     float: right;
@@ -131,8 +156,66 @@
     display: none;
 }
 
+.Signup-form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.Signup-form p {
+    font-size: 12px;
+    display: none;
+}
+
+.Signup-form h1 {
+    font-weight: 600;
+    margin-top: -10px;
+}
+.Signup-form button {
+    border: none;
+    width: 12vw;
+    height: 5vh;
+    border-radius: 6px;
+    background-color: #FDD943;
+    color: black;
+    font-weight: 600; 
+    font-size: 15px;
+}
+.Signup-tag input {
+    border:1px solid grey;
+    margin-right: 5vw;
+    border-radius: 4%;
+}
+
+.pop-up-signup-show {
+    display: block;
+    z-index: 999;
+    position:absolute;
+    top:78%;
+    opacity: 1;
+    background-color: 
+    #f5f5f5;
+    width: 100vw;
+    height:50vh;
+    margin: auto;
+    padding: 2em;
+    border-radius: 2%;
+}
+
+.pop-up-signup-hide {
+    display: none;
+}
+
+
 
 @media (max-width: 640px) {
+    .header button{
+        height: 4vh;
+        font-size: 14px;
+    }
+
     .Service-page .check-start{
         margin-right: 7vw;
     }
@@ -143,9 +226,104 @@
         margin-right: 7vw;
     }
 
+
 }
 
-@media (max-width: 470px) {
+@media (max-width: 390px) {
+    .Home-page {
+        height: 18vh;
+    }
+    .Home-left {
+        padding-right: 4vw;
+        width: 50vw;
+        align-items: center;
+        margin-top: 0;
+    }
+    .Home-right {
+        width: 50vw;
+        opacity: 0.7;
+    }
+    .Home-left a button {
+        margin-top: 5vh;
+        margin-left:0;
+        font-size: 11px;
+        height: 4vh;
+        width: 120px;
+        padding: 5px;
+        
+    }
+    .Home-page h1{
+        font-size: 1.6em;
+        line-height: 2em;
+    }
+    .Home-left p {
+        display:none;
+       
+    }
+    .Service-page {
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 10vh;
+    }
+    .Service-page form {
+        display:flex;
+        flex-direction: column;
+    }
+    .Service-page h2{
+        font-size: 24px;
+    }
+    .Service-page form label {
+        font-size: 15px;
+    }
+    .Service-page button {
+        height: 4vh;
+    }
 
-    
+    .Signup-form {
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 10vh;
+    }
+
+    .Signup-form p {
+        font-size: 10px;
+    }
+    .Signup-form h1{
+        font-size: 1.6em;
+        margin-bottom: 2vh;
+    }
+    .Signup-form button {
+        width: 100px;
+        height: 4vh;
+    }
+    .Sign-up-header {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 42px;
+    }
+    .Sign-up-header h1{
+        font-size: 30px;
+        color:black;
+    }
+    .Sign-up-header button{
+        font-size: 2 0px;
+        color:black;
+    }
+    .Signup-form .form-body {
+        background-color: #f5f5f5;
+        display: flex;
+        text-align: center;
+        
+    }
+    .form-body form{
+        background-color: #f5f5f5;
+        margin-left: 42px;
+    }
+    .form-body form button {
+        width: 12em;
+        background-color: #FDD943;
+        color: black;
+    }
+   
 }
