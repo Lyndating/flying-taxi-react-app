@@ -3,28 +3,31 @@ import React from 'react'
 const RedirectingPage = () => {
   return (
 
+<div class="w-60 h-50 bg-blue-50 p-6 -center">
+
+  <h1 class="font-bold text-xl text-center text-blue-700"><span class="inline-block">Thanks for signing up for our newsletter!</span></h1>
 
 
-    <div className="bg-white h-screen flex flex-col
-    justify-center">
-      <h1 className="lg: text-2xl md:text-2xl sm:text-2xl
-      text-2xl font-black mb-6 text-center text-blue-500" > Congratulations, you have newslatter</h1>
+  <div class="flex">
+
+
+
+
+  <button type="Back to Home" className="m-12 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-not-allowed ">submit</button>
+
+
+
+
+ 
+
 </div>
+    </div>
 
 
 
 
+  
 
-
-      
-      
-      
-   
-   
-      
-      
-
-    
   )
 }
 

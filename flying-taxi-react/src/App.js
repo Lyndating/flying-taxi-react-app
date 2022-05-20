@@ -3,6 +3,7 @@ import Signup from './components/Signup';
 
 import SignUpForm from './components/SignUpForm';
 import RedirectingPage from './components/RedirectingPage';
+import CheckBox from './components/CheckBox';
 
 
 
@@ -31,8 +32,12 @@ function App() {
     <div className="App">
       {routes}
       {/* <Signup /> */}
-      {/* <Service/> */}
-      {/* <SignUpForm /> */}
+
+      {/* <SignUpForm />
+      <RedirectingPage /> */}
+      {/* <CheckBox /> */}
+
+      {/* <RedirectingPage /> */}
       {/* <RedirectingPage /> */}
 
   
