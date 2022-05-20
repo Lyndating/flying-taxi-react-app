@@ -71,13 +71,13 @@ const Signup = (props) => {
 
     return (
         <div>
-            <div className="bg-gray-5 w-64 Sign-up-header">
+            <div className="bg-yellow-50 w-64 Sign-up-header">
             <h1>Sign Up</h1>
             <button onClick={props.onClick}style={{float:"right"}}>X</button>
             </div>
             <div className="my-2 flex flex-col">
                 <form onSubmit={handleSubmit}
-                className="w-64 bg-gray-50 p-4 flex flex-col shadow-sm">
+                className="w-64 bg-yellow-50 p-4 flex flex-col shadow-sm">
                     <label>
                         First name
                         <input name='first_name' value={state.first_name} onChange={handleChange}
@@ -114,7 +114,7 @@ const Signup = (props) => {
                         : null}
                     </label>
                     <br></br>    
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Up</button>
+                    <button className="bg-yellow-400 hover:bg-yellow-200 text-white font-bold py-2 px-4 rounded">Sign Up</button>
 
 
 

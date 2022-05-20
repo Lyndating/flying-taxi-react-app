@@ -18,7 +18,7 @@ const routes = (
   <Router>
     <Header/>
     <Routes>
-    {/* <Route exact path='/' element={<Home/>}/> */}
+    <Route exact path='/' element={<Home/>}/>
     <Route path='/service' element={<Service/>}/>
     <Route path='/contact' element={<Contact/>}/>
     </Routes>
@@ -29,17 +29,14 @@ function App() {
   return (
     <div className="App">
       {routes}
-      {/* <Signup /> */}
-<<<<<<< HEAD
+      <Signup />
 
-      {/* <SignUpForm />
-      <RedirectingPage /> */}
       <CheckBox />
-=======
-      {/* <Service/> */}
+
+      <Service/> */
       {/* <SignUpForm /> */}
       <RedirectingPage />
->>>>>>> 7106d8c9385e86f62b899eccf09b0bb5e5ac014f
+
 
   
 
