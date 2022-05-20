@@ -49,7 +49,11 @@ const Home = () => {
         SetFormShow(false);
         setCompleteForm(true);
     }
-    
+
+    const _emailHandler = (event) => {
+        event.preventDefault()
+        setEmailInput(event.target.value)
+    }
     return (
         <>
         <div className='Home-page'>
@@ -101,13 +105,13 @@ const Home = () => {
             <p>Get all the latest updates straight to your inbox!</p>
             <h1>Sign up to our newsletter</h1>
             <div className='Signup-tag'>
-            <input type='email' placeholder="Your email"onChange={emailInput}/>
+            <input type='email' placeholder="Your email" onChange={_emailHandler}/>
             <button onClick={_SignupHandler}>Sign up</button>
             </div>
         </div>
         {formshow &&
             <div className={signupStyleClassName}>
-                <Signup show={formshow} onClick={closeSignupForm} onSubmit={saveUserHandler}/>
+                <Signup show={formshow} email={emailInput} onClick={closeSignupForm} onSubmit={saveUserHandler}/>
             </div>
         }
         {completeForm &&
