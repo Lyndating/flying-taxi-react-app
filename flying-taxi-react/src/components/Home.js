@@ -15,7 +15,7 @@ const Home = () => {
     const [result, setResult] = useState(false);
     const [price, setPrice]= useState(0);
     const [formshow, SetFormShow] = useState(false);
-    const [emailInput, setEmailInput] = useState();
+    const [emailInput, setEmailInput] = useState('');
 
     const _sumbithandler = (e)=>{
         e.preventDefault();
@@ -47,6 +47,11 @@ const Home = () => {
     }
     const saveUserHandler = (data)=> {
         console.log(data);
+    }
+
+    const _emailHandler = (event) => {
+        event.preventDefault()
+        setEmailInput(event.target.value)
     }
     return (
         <>
@@ -99,13 +104,13 @@ const Home = () => {
             <p>Get all the latest updates straight to your inbox!</p>
             <h1>Sign up to our newsletter</h1>
             <div className='Signup-tag'>
-            <input type='email' placeholder="Your email"onChange={emailInput}/>
+            <input type='email' placeholder="Your email" onChange={_emailHandler}/>
             <button onClick={_SignupHandler}>Sign up</button>
             </div>
         </div>
         {formshow &&
             <div className={signupStyleClassName}>
-                <Signup show={formshow} onClick={closeSignupForm} onSubmit={saveUserHandler}/>
+                <Signup show={formshow} email={emailInput} onClick={closeSignupForm} onSubmit={saveUserHandler}/>
             </div>
             
         }

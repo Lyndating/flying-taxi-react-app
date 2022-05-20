@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 
 const Signup = (props) => {
-    console.log(props);
-    const [user, setUser] = useState({});
+    // console.log(props.email)
     const [state, setState] = useState({
         first_name: '',
         last_name: '',
@@ -67,9 +66,7 @@ const Signup = (props) => {
             //     navigate("/", { replace: true });
             // }
           });
-
-          console.log(signupErrors)
-    }
+    };
     
 
     return (
@@ -107,7 +104,7 @@ const Signup = (props) => {
 
                     <label>
                         Email
-                        <input name='email' value={state.email} onChange={handleChange}
+                        <input name='email' value={props.email} onChange={handleChange}
                         className="p-2 border-2 border-gray-400" required/>
                         {signupErrors.email !== undefined ? 
                             <ul className = "form-errors"> {signupErrors.email.map((error) => (
