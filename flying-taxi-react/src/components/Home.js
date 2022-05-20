@@ -45,7 +45,9 @@ const Home = () => {
     }else{
         signupStyleClassName="pop-up-signup-hide";
     }
-    
+    const saveUserHandler = (data)=> {
+        console.log(data);
+    }
     return (
         <>
         <div className='Home-page'>
@@ -103,7 +105,7 @@ const Home = () => {
         </div>
         {formshow &&
             <div className={signupStyleClassName}>
-                <Signup show={formshow} onClick={closeSignupForm}/>
+                <Signup show={formshow} onClick={closeSignupForm} onSubmit={saveUserHandler}/>
             </div>
             
         }

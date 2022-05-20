@@ -10,7 +10,7 @@ const Signup = (props) => {
     });
     const [formedit, setFormEdit] = useState(true);
     const [signupErrors, setSignupErrors] = useState([]);
-
+    const [completeForm, setCompleteForm] = useState(false);
     // const signUp = (user) => {
     //     fetch(`https://flying-taxi-service-server.herokuapp.com/users`, {
     //       method: 'POST',
@@ -66,6 +66,7 @@ const Signup = (props) => {
               setSignupErrors(jsonResponse);
             }
           });
+          setCompleteForm(true);
     }
     
 
