@@ -1,4 +1,5 @@
 import React from 'react';
+import Signup from './components/Signup';
 
 import SignUpForm from './components/SignUpForm';
 import RedirectingPage from './components/RedirectingPage';
@@ -27,8 +28,9 @@ function App() {
   return (
     <div className="App">
       {routes}
+      <Signup />
 
-      <SignUpForm />
+      {/* <SignUpForm /> */}
       <RedirectingPage />
 
   
