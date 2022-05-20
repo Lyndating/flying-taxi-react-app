@@ -12,6 +12,7 @@ import Home from './components/Home'
 import Service from './components/Service';
 import Contact from './components/Contact';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const routes = (
   <Router>
@@ -21,6 +22,7 @@ const routes = (
     <Route path='/service' element={<Service/>}/>
     <Route path='/contact' element={<Contact/>}/>
     </Routes>
+    <Footer/>
   </Router>
 )
 
@@ -31,7 +33,7 @@ function App() {
       {/* <Signup /> */}
       {/* <Service/> */}
       {/* <SignUpForm /> */}
-      <RedirectingPage />
+      {/* <RedirectingPage /> */}
 
   
 
