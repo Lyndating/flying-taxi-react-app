@@ -10,14 +10,14 @@
 // }
 
 
-const SignupSchema = Yup.object().shape({
-  firstName: Yup.string()
-  .min(3, 'short')
-  .max(20, 'too long')
-  .required('Required'),
-  lastName: Yup.string().min(3, "too short"),
-  email: Yup.string().email("2,invalid email").required("Required")
-})
+// const SignupSchema = Yup.object().shape({
+//   firstName: Yup.string()
+//   .min(3, 'short')
+//   .max(20, 'too long')
+//   .required('Required'),
+//   lastName: Yup.string().min(3, "too short"),
+//   email: Yup.string().email("2,invalid email").required("Required")
+// })
 
 // const SignupSchema = Yup.object().shape({
 //   firstName: Yup.string()
