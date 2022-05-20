@@ -37,17 +37,6 @@
 
  
 //   return (
-<<<<<<< HEAD
-//    <Formik
-//    initialValues={{firstName:'', lastName:'', email:''}}
-//   //  validationSchema={SignupSchema}
-//    onSubmit={submitForm}
-// >
-
-
-
-
-=======
 //   //  <Formik
 //   //  initialValues={{firstName:'', lastName:'', email:''}}
 //   // //  validationSchema={SignupSchema}

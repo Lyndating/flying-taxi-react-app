@@ -67,6 +67,8 @@ const Signup = (props) => {
               setSignupErrors(jsonResponse);
             }
           });
+          
+
     }
     
 
@@ -74,9 +76,9 @@ const Signup = (props) => {
         <div>
             <div className=" w-64 Sign-up-header">
             <h1>Sign Up</h1>
-            <button onClick={props.onClick}style={{float:"right"}}>X</button>
+            <button onClick={props.onClick} style={{float:"right"}}>X</button>
             </div>
-            <div className="my-2 flex flex-col">
+            <div className="form-body my-2 flex flex-col">
                 <form onSubmit={handleSubmit} 
                 
                 className="w-64  p-4 flex flex-col shadow-sm">

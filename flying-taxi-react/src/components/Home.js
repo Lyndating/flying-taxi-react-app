@@ -49,6 +49,7 @@ const Home = () => {
         SetFormShow(false);
         setCompleteForm(true);
     }
+    
     return (
         <>
         <div className='Home-page'>
